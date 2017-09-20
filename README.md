@@ -156,7 +156,7 @@ The tasks executed by script are:
 	
 	In addition to this a basic configuration file for the OpenVPN client it will be generated and loaded on Azure.
 
-**NOTE**: All the configuration process may take up to half an hour or more.
+**NOTE**: All the configuration process could be very long (half hour or more) especially if you chose to execute system update.
 
 ## End of the installation
 
@@ -187,10 +187,11 @@ sudo su
 cd /etc/openvpn/rsa/
 source ./vars
 ./build-key pippo
-```bash
-Answer all the questions.
-At the end you will find following files to give to new client together with `ca.crt` and `client.ovpn`
 ```
+Answer all the questions.
+
+At the end you will find following files to give to new client together with `ca.crt` and `client.ovpn`
+```bash
 /etc/openvpn/rsa/keys/pippo.crt
 /etc/openvpn/rsa/keys/pippo.key
 ```
