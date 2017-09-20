@@ -199,7 +199,9 @@ At the end you will find following files to give to new client together with `ca
 ## Security tips
 
 1. After setup, and after you done a check that all functions properly, you **must** close port 22 removing the rules on Network Security Group (NSG). In this way you close the access to administrative interface from Internet. You could continue to manage your OpenVPN server using its private IP after you have established a VPN connection.
+
 	The port 22 was opened from Internet to permit monitoring of deployment. Indeed, after become root, you can follow the execution of bash command on OpenVPN server using the `tail -f` command with the log file.
 2. The Easy RSA store all the private keys and certificates on OpenVPN server. If an attacker gain access to file system could steal the key to generate valid credentials for VPN. For this it is important to plane a relocation of Easy RAS with its working directory on other location if you want maintain this server up and running for long period.
 3. If CentOS update (`yum -y update`) was not executed during installation execute it as soon as possible. An updated system is less vulnerable to attacks.
+
 	**NOTE**: This operation could reset firewall configuration. To go back to correct configuration execute again the steps of firewall configuration that you can find inside Bash script.
