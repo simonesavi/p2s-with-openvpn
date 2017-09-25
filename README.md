@@ -101,7 +101,7 @@ The script start setting variable with the value sent as parameter during the sc
 
 You can inspect the first “while getopts” construct. In his body un can see the couples option/script variable, e.g. the option -v is used to pass at script the value that variable VNET while assume.
 
-The most important variables that must be modified are the ones that are set by Power Shell script in the "* *Configure Azure Custom Script Virtual Machine Extension (2.0)* *" step.
+The most important variables that must be modified are the ones that are set by Power Shell script in the " *Configure Azure Custom Script Virtual Machine Extension (2.0)* " step.
 
 The tasks executed by script are:
 
