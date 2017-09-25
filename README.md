@@ -61,8 +61,8 @@ The tasks executed by script are:
 5. Create Storage Account and load Bash script
 
 	A Blob storage account will be created with a dual purpose:
-	i. To archive the Bash script that will be used to configure OpenVPN server
-	ii. To maintain the configuration files that must be used by OpenVPN client
+	1. To archive the Bash script that will be used to configure OpenVPN server
+	2. To maintain the configuration files that must be used by OpenVPN client
 	At this point of procedure the script simply create storage account and load Bash script on it. The Bash script loaded will be the one that is present in working directory.
 
 6. Configure and set [Azure Custom Script Virtual Machine Extension (2.0)](https://github.com/Azure/custom-script-extension-linux)
