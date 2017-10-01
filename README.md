@@ -119,6 +119,8 @@ The tasks executed by script are:
 
 	This step was disabled (commented) because its execution could be very long. This slow down the whole installation process.
 
+	**NOTE**: The parameter `--exclude=WALinuxAgent` was added to avoid problem described [here](https://github.com/Azure/WALinuxAgent/issues/178). To update Azure agent run `yum -y update` manually at the end of installation.
+
 4. Enable Swap
 
 	The used OS image is provided without a Swap configuration. This space normally is allocated as a dedicated disk partition but to avoid disk manipulation it will be created a swap file.
@@ -144,8 +146,6 @@ The tasks executed by script are:
 9. OpenVPN Client Certificate Generation
 
 	It will be generated the first certificate that it will be used by the client during the client/server authentication process.
-
-	**NOTE**: The parameter `--exclude=WALinuxAgent` was added to avoid problem described [here](https://github.com/Azure/WALinuxAgent/issues/178). To update Azure agent run `yum -y update` manually at the end of installation.
 
 10. Azure CLI installation
 
